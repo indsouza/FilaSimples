@@ -45,9 +45,22 @@ while executando:
         fila_prioritaria.append(senha)
         print(f"Senha prioritária emitida: {senha}")
 
+# Implementação da chamada de senha
 
     elif opcao == "3":
-        print("Você escolheu chamar a próxima senha.")
+        if len(fila_prioritaria) > 0:
+            senha = fila_prioritaria.pop(0)
+            total_atendidos += 1
+            print(f"Senha chamada: {senha}")
+
+        elif len(fila_normal) > 0:
+            senha = fila_normal.pop(0)
+            total_atendidos += 1
+            print(f"Senha chamada: {senha}")
+
+        else:
+            print("Não existem senhas aguardando atendimento.")
+
 
     elif opcao == "4":
         print("Você escolheu consultar as senhas pendentes.")
