@@ -61,9 +61,14 @@ while executando:
         else:
             print("Não existem senhas aguardando atendimento.")
 
+#Consulta às senhas pendentes
 
     elif opcao == "4":
-        print("Você escolheu consultar as senhas pendentes.")
+        print("\n===== SENHAS PENDENTES =====")
+        print(f"Senhas normais: {len(fila_normal)}")
+        print(f"Senhas prioritárias: {len(fila_prioritaria)}")
+        print(f"Total de atendimentos realizados: {total_atendidos}")
+
 
     elif opcao == "5":
         print("Encerrando o FilaSimples...")
