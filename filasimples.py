@@ -29,15 +29,22 @@ while executando:
 
     opcao = input("Escolha uma opção: ")
 
-    
+# Implementação da senha normal
+
     if opcao == "1":
         contador_normal += 1
         senha = f"N{contador_normal:03d}"
         fila_normal.append(senha)
         print(f"Senha normal emitida: {senha}")
 
+# Implementação da senha prioritária
+
     elif opcao == "2":
-        print("Você escolheu emitir uma senha prioritária.")
+        contador_prioritario += 1
+        senha = f"P{contador_prioritario:03d}"
+        fila_prioritaria.append(senha)
+        print(f"Senha prioritária emitida: {senha}")
+
 
     elif opcao == "3":
         print("Você escolheu chamar a próxima senha.")
