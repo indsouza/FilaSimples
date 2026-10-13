@@ -82,3 +82,8 @@ Estrutura de repetição (while): mantém o programa em funcionamento até que o
 Alteração de estado: ocorre quando os contadores são incrementados, novas senhas são adicionadas às listas e senhas chamadas são removidas por meio do método pop(0).
 
 Dessa forma, o FilaSimples demonstra a aplicação do paradigma imperativo na resolução de um problema simples de organização de atendimentos.
+
+7. Melhorias a implementar
+
+* Implementar a possibilidade de impressão da senha.
+* Construção de um front-end a fim de melhorar experiência do usuário.
