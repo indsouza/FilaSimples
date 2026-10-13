@@ -1,63 +1,84 @@
-FilaSimples — Sistema Simplificado de Distribuição e Chamada de Senhas
+FilaSimples — Sistema de Distribuição de Senhas
 
-1. Descrição do problema
+1. Descrição do projeto
 
-    Em locais que realizam atendimento ao público, como clínicas, laboratórios e repartições públicas, é necessário organizar a ordem de atendimento das pessoas. Quando não existe um controle adequado, podem ocorrer situações como desorganização das filas, chamadas fora de ordem e dificuldades para diferenciar atendimentos normais e prioritários.
-    Pensando nesse problema, o projeto FilaSimples propõe o desenvolvimento de um sistema básico de distribuição e chamada de senhas, permitindo organizar os atendimentos de forma simples.
-    O programa será desenvolvido em Python, utilizando o paradigma imperativo, com execução por meio de um menu no terminal. O sistema permitirá emitir senhas normais e prioritárias, chamar a próxima senha disponível e consultar a quantidade de pessoas aguardando atendimento.
-    O funcionamento será baseado em uma sequência de instruções, utilizando variáveis para armazenar informações, estruturas condicionais para verificar as regras de atendimento e estruturas de repetição para manter o programa em funcionamento.
+O FilaSimples é um programa desenvolvido em Python para organizar a emissão e a chamada de senhas de atendimento. O sistema permite gerar senhas normais e prioritárias, chamar a próxima senha e consultar a quantidade de pessoas aguardando atendimento.
+O projeto utiliza o paradigma imperativo e funciona por meio de um menu no terminal, sem necessidade de interface gráfica ou banco de dados.
 
-2. Objetivo geral
+2. Objetivo
 
-    Desenvolver um sistema simples de gerenciamento de senhas de atendimento utilizando Python e os conceitos do paradigma imperativo, permitindo controlar a emissão e a chamada de senhas normais e prioritárias.
+Desenvolver um sistema simples de gerenciamento de senhas, aplicando os conceitos do paradigma imperativo, como variáveis, atribuições, estruturas condicionais e de repetição.
 
-3. Objetivos específicos
+3. Funcionalidades
 
-    * Implementar um menu textual para interação com o usuário.
+    * Emitir senhas normais e prioritárias.
 
-    * Permitir a emissão de senhas normais e prioritárias.
+    * Gerar senhas com numeração sequencial (N001, N002, P001, P002...).
 
-    * Organizar a chamada das senhas conforme a ordem de emissão e o tipo de atendimento.
+    * Chamar a próxima senha, dando preferência às prioritárias.
 
-    * Priorizar as senhas de atendimento prioritário em relação às senhas normais.
+    * Consultar a quantidade de senhas pendentes e atendimentos realizados.
 
-    * Permitir a consulta da quantidade de senhas que ainda aguardam atendimento.
+    * Informar quando não houver senhas aguardando atendimento.
 
-    * Aplicar variáveis, atribuições, estruturas condicionais, estruturas de repetição e funções na implementação do programa.
-
-4. Requisitos funcionais
+    * Encerrar o programa pelo menu principal.
 
 
-    RF01 — O sistema deverá permitir a emissão de senhas para atendimento normal, atribuindo uma numeração sequencial a cada nova senha.
+4. Regras de funcionamento
 
-    RF02 — O sistema deverá permitir a emissão de senhas prioritárias, utilizando uma sequência de numeração própria para diferenciá-las das senhas normais.
+    * As senhas normais começam com N e as prioritárias com P.
 
-    RF03 — O sistema deverá permitir a chamada da próxima senha, respeitando a ordem de emissão dentro de cada categoria e dando preferência às senhas prioritárias.
+    * Cada categoria possui sua própria sequência numérica.
 
-    RF04 — O sistema deverá apresentar a quantidade de senhas normais e prioritárias que ainda aguardam atendimento.
+    * As senhas são chamadas na ordem de emissão dentro de cada categoria.
 
-    RF05 — O sistema deverá apresentar uma mensagem quando o usuário tentar chamar uma senha e não houver pessoas aguardando atendimento.
+    * As senhas prioritárias são chamadas antes das normais.
 
-    RF06 — O sistema deverá disponibilizar uma opção para encerrar sua execução.
+    * Após a chamada, a senha é removida da fila.
 
+    * As informações são armazenadas apenas durante a execução do programa.
 
-5. Regras de funcionamento
+5. Instruções de uso
 
+Requisito: Python 3 instalado no computador.
 
-    1. As senhas normais serão identificadas pela letra N, seguida de uma numeração sequencial, como N001, N002 e N003.
+Para executar:
 
-    2. As senhas prioritárias serão identificadas pela letra P, seguida de uma numeração sequencial, como P001, P002 e P003.
+Baixe ou clone o repositório do projeto.
+Abra a pasta FilaSimples no terminal.
 
-    3. As senhas serão chamadas respeitando a ordem em que foram emitidas dentro de cada categoria.
+Execute o comando:
 
-    4. Havendo senhas prioritárias pendentes, elas serão chamadas antes das senhas normais.
+python filasimples.py ou dê play no arquivo utilizando o VS Code.
 
-    5. Após a chamada, a senha será retirada da fila de espera.
+No menu apresentado, escolha uma das opções:
 
-    6. Caso não existam senhas pendentes, o programa deverá informar que a fila está vazia.
+1: Emitir senha normal.
 
-    7. O sistema continuará funcionando até que o usuário selecione a opção de encerramento.
+2: Emitir senha prioritária.
 
+3: Chamar próxima senha.
 
+4: Consultar senhas pendentes.
 
+5: Sair do programa.
 
+O menu continuará disponível até que a opção 5 seja selecionada.
+
+6. Lógica imperativa utilizada
+
+O programa utiliza o paradigma imperativo, no qual as instruções são executadas em sequência e modificam os valores armazenados nas variáveis ao longo da execução.
+
+Os principais conceitos utilizados são:
+
+Variáveis e atribuições: armazenam e atualizam os contadores de senhas e o total de atendimentos realizados.
+
+Listas: armazenam as senhas normais e prioritárias que aguardam atendimento.
+
+Estruturas condicionais (if, elif, else): verificam a opção selecionada no menu e determinam qual fila deverá ser atendida.
+
+Estrutura de repetição (while): mantém o programa em funcionamento até que o usuário escolha sair.
+
+Alteração de estado: ocorre quando os contadores são incrementados, novas senhas são adicionadas às listas e senhas chamadas são removidas por meio do método pop(0).
+
+Dessa forma, o FilaSimples demonstra a aplicação do paradigma imperativo na resolução de um problema simples de organização de atendimentos.
